@@ -18,7 +18,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class HogeController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="homepage2")
      */
     public function indexAction(Request $request, $isOpen = false)
     {
