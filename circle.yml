@@ -27,5 +27,4 @@ dependencies:
 test:
   override:
     - bin/phpunit -c app src
-    - bin/phpmd src xml phpmd.xml --reportfile phpmd.result.xml
     - ./report.sh

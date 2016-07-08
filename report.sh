@@ -2,6 +2,10 @@
 
 set -eu
 
+set +e
+bin/phpmd src xml phpmd.xml --reportfile phpmd.result.xml
+set -e
+
 if [ -z "${CI_PULL_REQUEST}" ]; then
     REPORTER=Saddler::Reporter::Github::CommitReviewComment
 else
