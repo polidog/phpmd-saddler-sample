@@ -29,6 +29,8 @@ test:
     - bin/phpunit -c app src
     - bin/phpmd src xml phpmd.xml --reportfile phpmd.result.xml
     - |
+        set -eu
+        
         if [ -z "${CI_PULL_REQUEST}" ]; then
             # when not pull request
             REPORTER=Saddler::Reporter::Github::CommitReviewComment
